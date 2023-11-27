@@ -10,8 +10,10 @@ def create_app(config_class=Config):
     
     # Import Blueprints
     from Project_Dir.main.routes import main
+    from Project_Dir.users.routes import users
     
     # Register Blueprints
-    app.register_blueprint(main)    
+    app.register_blueprint(main)
+    app.register_blueprint(users)
     
     return app
