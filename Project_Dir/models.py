@@ -1,8 +1,8 @@
+from . import db, login_manager
 from datetime import datetime
-from Project_Dir import db, login_manager
 from flask_login import UserMixin
 
-
+# Required for login_manager extension
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
